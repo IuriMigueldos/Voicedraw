@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 220px;
+      padding: 15px;
+      text-align: center;
+      background-color: #f4f4f9;
+    }
+    h3 {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #6200ee;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #3700b3;
+    }
+    p {
+      font-size: 11px;
+      color: #666;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h3>Leitor de Voz</h3>
+
+  <label for="modoLeitura" style="display:block; margin-bottom: 8px; font-size: 12px; color: #444;">Modo de leitura</label>
+  <select id="modoLeitura" style="width: 100%; padding: 6px; margin-bottom: 12px; border-radius: 4px; border: 1px solid #ccc;">
+    <option value="palavra">Palavra por palavra</option>
+    <option value="frase">Por frase</option>
+  </select>
+
+  <label for="velocidadeLeitura" style="display:block; margin-bottom: 8px; font-size: 12px; color: #444;">Velocidade</label>
+  <select id="velocidadeLeitura" style="width: 100%; padding: 6px; margin-bottom: 12px; border-radius: 4px; border: 1px solid #ccc;">
+    <option value="0.75">Lenta</option>
+    <option value="0.95" selected>Normal</option>
+    <option value="1.2">Rápida</option>
+  </select>
+
+  <button id="startBtn" style="margin-bottom: 8px; display:block; width:100%;">Ler Seleção</button>
+  <div style="display:flex; gap:6px;">
+    <button id="pauseBtn" style="flex:1;">Pausar</button>
+    <button id="resumeBtn" style="flex:1;">Continuar</button>
+    <button id="stopBtn" style="flex:1;">Parar</button>
+  </div>
+
+  <p>Use as setas <b>Direita</b> (próxima), <b>Esquerda</b> (voltar), <b>Espaço</b> (pausar/continuar) e <b>Esc</b> (parar).</p>
+  <script src="popup.js"></script>
+</body>
+</html>

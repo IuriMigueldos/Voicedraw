@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Leitor de Palavras em Voz",
+  "version": "1.1",
+  "description": "Lê textos selecionados palavra por palavra através do botão direito.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "contextMenus"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "128": "icon.png"
+  }
+}
