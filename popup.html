@@ -2,13 +2,15 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <title>Leitor de Voz</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      width: 220px;
+      width: 240px;
       padding: 15px;
       text-align: center;
       background-color: #f4f4f9;
+      box-sizing: border-box;
     }
     h3 {
       font-size: 14px;
@@ -31,6 +33,12 @@
       font-size: 11px;
       color: #666;
       margin-top: 10px;
+    }
+    #status {
+      min-height: 28px;
+      font-size: 12px;
+      color: #333;
+      overflow-wrap: anywhere;
     }
   </style>
 </head>
@@ -57,6 +65,7 @@
     <button id="stopBtn" style="flex:1;">Parar</button>
   </div>
 
+  <p id="status" role="status" aria-live="polite"></p>
   <p>Use as setas <b>Direita</b> (próxima), <b>Esquerda</b> (voltar), <b>Espaço</b> (pausar/continuar) e <b>Esc</b> (parar).</p>
   <script src="popup.js"></script>
 </body>
